@@ -140,7 +140,7 @@ Public Class frmMain
         misc.SafeKill(stlfile)
 
         Dim txt = "openscad.exe " &
-            CStr("-o @" & stlfile & "@ -p @" & ParamOutfile & "@ -P " & p_paramSetName & " @" & cadfile & "@").Replace("@", ChrW(34))
+            CStr("-o @" & stlfile & "@ -p @" & ParamOutfile & "@ -P " & p_paramSetName & " @" & cadfile & "@").Replace("@", Chr(34))
 
         If Debugger.IsAttached Then
             File.WriteAllText(batFile, txt & vbCrLf & "pause")

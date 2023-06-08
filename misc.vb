@@ -3,6 +3,7 @@ Imports System.Reflection
 Imports System.Security.Policy
 
 Module misc
+    Private Const QUOTE As String = Chr(34)
 
     Public Sub FirstRun()
         '--- make sure we have a save to path
@@ -84,10 +85,10 @@ Module misc
         Dim prg As New Process
         Dim prginfo As New ProcessStartInfo With {
             .FileName = "openscad.exe",
-            .Arguments = Chr(34) & Model & Chr(34),
+            .Arguments = QUOTE & Model & QUOTE,
             .UseShellExecute = True,
             .WindowStyle = ProcessWindowStyle.Normal,
-            .WorkingDirectory = Chr(34) & CadPath & Chr(34)
+            .WorkingDirectory = QUOTE & CadPath & QUOTE
         }
 
         prg.StartInfo = prginfo
@@ -105,8 +106,8 @@ Module misc
 
         Dim prg As New Process
         Dim prginfo As New ProcessStartInfo With {
-            .FileName = Chr(34) & My.Settings.slicerEXE & Chr(34),
-            .Arguments = Chr(34) & modelSTL & Chr(34),
+            .FileName = QUOTE & My.Settings.slicerEXE & QUOTE,
+            .Arguments = QUOTE & modelSTL & QUOTE,
             .UseShellExecute = True,
             .WindowStyle = ProcessWindowStyle.Normal
         }
