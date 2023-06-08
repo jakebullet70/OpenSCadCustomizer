@@ -1,0 +1,51 @@
+{
+    "fileFormatVersion": "1",
+    "parameterSets": {
+        "New set 1": {
+            "BPanL": "1",
+            "BShell": "1",
+            "FPanL": "0",
+            "Filet": "2",
+            "FootDia": "8",
+            "FootHeight": "10",
+            "FootHole": "3",
+            "Height": "60",
+            "Length": "120",
+            "PCBFeet": "0",
+            "PCBLength": "70",
+            "PCBPosX": "7",
+            "PCBPosY": "6",
+            "PCBWidth": "50",
+            "Resolution": "50",
+            "TShell": "1",
+            "Thick": "2",
+            "Vent": "1",
+            "Vent_width": "1.5",
+            "Width": "100",
+            "m": "0.90000000000000002"
+        },
+        "ubox1": {
+            "BPanL": "1",
+            "BShell": "1",
+            "FPanL": "0",
+            "Filet": "2",
+            "FootDia": "8",
+            "FootHeight": "10",
+            "FootHole": "3",
+            "Height": "!HEIGHT!",
+            "Length": "!LENGTH!",
+            "PCBFeet": "0",
+            "PCBLength": "70",
+            "PCBPosX": "7",
+            "PCBPosY": "6",
+            "PCBWidth": "50",
+            "Resolution": "50",
+            "TShell": "1",
+            "Thick": "2",
+            "Vent": "!VENT!",
+            "Vent_width": "1.5",
+            "Width": "!WIDTH!",
+            "m": "0.90000000000000002"
+        }
+    }
+}

@@ -1,0 +1,17 @@
+#
+#   File format info:  These top lines will be skipped until lots of '######' are found
+#	readible lines as follows
+#
+#   1st line: 
+#	Description,SCad file name, JSON cusomizer file name, Param Name in the customizer file, picture file name
+#	
+#	2nd line and everthing else that follows are properties that are read in the GUI so you can edit and get replaced inside the json file:
+#	Var to search and replace in the JSON file with value, prompt text, default value
+#	
+################################################################
+Universal Box,ubox1.scad,ubox1.json,ubox1,ubox1.jpg
+!WIDTH!,Box Width (mm),80
+!HEIGHT!,Box Height (mm),40
+!LENGTH!,Box Length (mm),120
+!VENT!,Vent (1-Yes 0-No),1
+

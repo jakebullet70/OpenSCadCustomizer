@@ -1,0 +1,15 @@
+{
+    "fileFormatVersion": "1",
+    "parameterSets": {
+        "sbox1": {
+            "extra_lid_thickness": "!ELT!",
+            "inside_height": "!HEIGHT!",
+            "inside_length": "!LENGTH!",
+            "inside_width": "!WIDTH!",
+            "radius": "1",
+            "screw_dia": "3",
+            "screw_loose_dia": "3.2000000000000002",
+            "thickness": "!WTHICK!"
+        }
+    }
+}

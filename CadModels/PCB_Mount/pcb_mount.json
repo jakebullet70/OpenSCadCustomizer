@@ -1,0 +1,14 @@
+{
+    "fileFormatVersion": "1",
+    "parameterSets": {
+        "pcb1": {
+            "mount_base_z": "!MBZ!",
+            "mount_height": "!MHEIGHT!",
+            "mount_hole_diameter": "!MHD!",
+            "mount_length": "!MLENGTH!",
+            "mount_width": "!MWIDTH!",
+            "pillar_diameter": "!PD!",
+            "pillar_hole_diameter": "!MBD!"
+        }
+    }
+}
