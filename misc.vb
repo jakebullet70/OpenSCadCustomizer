@@ -88,7 +88,7 @@ Module misc
             .Arguments = QUOTE & Model & QUOTE,
             .UseShellExecute = True,
             .WindowStyle = ProcessWindowStyle.Normal,
-            .WorkingDirectory = QUOTE & CadPath & QUOTE
+            .WorkingDirectory = CadPath
         }
 
         prg.StartInfo = prginfo
