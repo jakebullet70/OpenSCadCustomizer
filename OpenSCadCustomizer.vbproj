@@ -232,7 +232,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="about.jpg" />
     <Content Include="CadModels\PCB_Mount\pcb_mount.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
