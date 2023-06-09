@@ -16,6 +16,6 @@ PCB Mount,pcb_mount.scad,pcb_mount.json,pcb1,pcb_mount.jpg
 !MLENGTH!,Mount Length (mm),60.45
 !MBD!,Mount base diameter,3.1
 !MHD!,Mount hole diameter,3.1
-!PD!,Piler diameter,6.4
+!PD!,Pillar diameter,6.4
 
 
