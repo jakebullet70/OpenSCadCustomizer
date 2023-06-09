@@ -22,6 +22,7 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.btnGenerate = New System.Windows.Forms.Button()
         Me.picBoxStyle = New System.Windows.Forms.PictureBox()
         Me.cboModels = New System.Windows.Forms.ComboBox()
@@ -190,9 +191,11 @@ Partial Class frmMain
         Me.Controls.Add(Me.cboModels)
         Me.Controls.Add(Me.picBoxStyle)
         Me.Controls.Add(Me.btnGenerate)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(653, 407)
         Me.Name = "frmMain"
-        Me.ShowIcon = False
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
         Me.Text = "Customizer - OpenSCad "
         CType(Me.picBoxStyle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
