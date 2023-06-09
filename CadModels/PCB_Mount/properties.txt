@@ -10,12 +10,12 @@
 #	
 ################################################################
 PCB Mount,pcb_mount.scad,pcb_mount.json,pcb1,pcb_mount.jpg
-!MBZ!,Mount base Z (mm),2.5
+!MBZ!,Mount base Z (mm 0=None),2.5
 !MHEIGHT!,Mount base Height (mm),15
 !MWIDTH!,Mount Width (mm),39.69
 !MLENGTH!,Mount Length (mm),60.45
 !MBD!,Mount base diameter,3.1
-!MHD!,Mount hole diameter,3.1
+!MHD!,Mount hole diameter,2.1
 !PD!,Pillar diameter,6.4
 
 
