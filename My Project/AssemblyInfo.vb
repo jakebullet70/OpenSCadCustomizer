@@ -9,8 +9,8 @@ Imports System.Runtime.InteropServices
 ' Review the values of the assembly attributes
 
 <Assembly: AssemblyTitle("OpenSCadCustomizer")>
-<Assembly: AssemblyDescription("A simple GUI to change OpenSCAD JSON customiser files and generate STL files.")>
-<Assembly: AssemblyCompany("Freeware - Open Source")>
+<Assembly: AssemblyDescription("A simple GUI to change OpenSCAD JSON customiser files and generate STL files. Freeware - Open Source")>
+<Assembly: AssemblyCompany("sadLogic")>
 <Assembly: AssemblyProduct("OpenSCadCustomizer")>
 <Assembly: AssemblyCopyright("Copyright ©sadLogic  2023")>
 <Assembly: AssemblyTrademark("Humankind, :) Freeware")>
