@@ -9,7 +9,7 @@ Public Class frmSetup
         txtSlicerEXE.Text = My.Settings.slicerEXE
         m_CadFolder = txtCadFolder.Text
         m_SaveFolder = txtSaveFolder.Text
-        m_SlicerEXE = txtSaveFolder.Text
+        m_SlicerEXE = txtSlicerEXE.Text
     End Sub
 
     Private Sub btnPath2_Click(sender As Object, e As EventArgs) Handles btnPath2.Click
@@ -30,9 +30,9 @@ Public Class frmSetup
 
         Dim dialog = New FolderBrowserDialog()
         dialog.SelectedPath = My.Settings.scadfolder
-        If Directory.Exists(dialog.SelectedPath) = False Then
-            dialog.SelectedPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)
-        End If
+        'If Directory.Exists(dialog.SelectedPath) = False Then
+        '    dialog.SelectedPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)
+        'End If
         If DialogResult.OK = dialog.ShowDialog() Then
             txtCadFolder.Text = dialog.SelectedPath
             m_CadFolder = txtCadFolder.Text

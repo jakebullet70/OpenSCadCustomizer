@@ -51,9 +51,9 @@ Partial Class frmSetup
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(9, 64)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(141, 13)
+        Me.Label2.Size = New System.Drawing.Size(147, 13)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Default foler to save STL file"
+        Me.Label2.Text = "Default folder to save STL file"
         '
         'txtSlicerEXE
         '

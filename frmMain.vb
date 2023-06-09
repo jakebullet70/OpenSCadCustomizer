@@ -72,7 +72,7 @@ Public Class frmMain
     Private Sub btnGenerate_Click(sender As Object, e As EventArgs) Handles btnGenerate.Click
 
         If Directory.Exists(My.Settings.scadfolder) = False Then
-            MsgBox("SCad folder not set, Please run setup.")
+            MsgBox("SCad folder not set. Please run setup.")
             Return
         End If
 
