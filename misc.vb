@@ -104,6 +104,11 @@ Module misc
             Return
         End If
 
+        If String.IsNullOrEmpty(My.Settings.slicerEXE) Then
+            MsgBox("Slicer path / exe not set. Please run setup.")
+            Return
+        End If
+
         Dim prg As New Process
         Dim prginfo As New ProcessStartInfo With {
             .FileName = QUOTE & My.Settings.slicerEXE & QUOTE,
