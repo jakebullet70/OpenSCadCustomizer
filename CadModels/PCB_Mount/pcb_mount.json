@@ -8,7 +8,7 @@
             "mount_length": "!MLENGTH!",
             "mount_width": "!MWIDTH!",
             "pillar_diameter": "!PD!",
-            "pillar_hole_diameter": "!MBD!"
+            "pillar_hole_diameter": "!PHD!"
         }
     }
 }
