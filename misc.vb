@@ -85,7 +85,7 @@ Module misc
         Dim prg As New Process
         Dim prginfo As New ProcessStartInfo With {
             .FileName = "openscad.exe",
-            .Arguments = QUOTE & Model & QUOTE,
+            .Arguments = "--autocenter --viewall " & QUOTE & Model & QUOTE,
             .UseShellExecute = True,
             .WindowStyle = ProcessWindowStyle.Normal,
             .WorkingDirectory = CadPath
