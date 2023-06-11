@@ -41,9 +41,9 @@
             "PCBWidth": "50",
             "Resolution": "50",
             "TShell": "1",
-            "Thick": "2",
+            "Thick": "!BWTHICK!",
             "Vent": "!VENT!",
-            "Vent_width": "1.5",
+            "Vent_width": "!VWIDTH!",
             "Width": "!WIDTH!",
             "m": "0.90000000000000002"
         }

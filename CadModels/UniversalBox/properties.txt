@@ -13,5 +13,8 @@ Universal Box,ubox1.scad,ubox1.json,ubox1,ubox1.jpg
 !WIDTH!,Box Width (mm),80
 !HEIGHT!,Box Height (mm),40
 !LENGTH!,Box Length (mm),120
+!BWTHICK!,Box Wall Thickness (mm),2
 !VENT!,Vent (1-Yes 0-No),1
+!VWIDTH!,Vent Width (mm),1.5
+
 
