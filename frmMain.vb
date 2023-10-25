@@ -9,6 +9,12 @@ Public Class frmMain
     Private p_paramSetFile = ""
     Private p_paramSetFileTMP = ""
     Private p_CADfile = ""
+
+
+    '--- How to write to FreeCAD spreedsheet-param files.
+    'https://stackoverflow.com/questions/60687834/how-to-update-spreadsheet-values-using-freecad-python-module
+
+
     '===========================================================================
 
 
