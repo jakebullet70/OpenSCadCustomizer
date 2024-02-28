@@ -35,6 +35,7 @@ Partial Class frmSetup
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.chkDebug = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'Label1
@@ -152,12 +153,23 @@ Partial Class frmSetup
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "Download here"
         '
+        'chkDebug
+        '
+        Me.chkDebug.AutoSize = True
+        Me.chkDebug.Location = New System.Drawing.Point(12, 163)
+        Me.chkDebug.Name = "chkDebug"
+        Me.chkDebug.Size = New System.Drawing.Size(173, 30)
+        Me.chkDebug.TabIndex = 13
+        Me.chkDebug.Text = "Add PAUSE when in batch file " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "when generating STL (Debug)"
+        Me.chkDebug.UseVisualStyleBackColor = True
+        '
         'frmSetup
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.CancelButton = Me.btnClose
         Me.ClientSize = New System.Drawing.Size(397, 206)
+        Me.Controls.Add(Me.chkDebug)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.btnClose)
@@ -193,4 +205,5 @@ Partial Class frmSetup
     Friend WithEvents btnClose As Button
     Friend WithEvents btnSave As Button
     Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents chkDebug As CheckBox
 End Class
