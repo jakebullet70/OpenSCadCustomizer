@@ -12,7 +12,7 @@ Imports System.Runtime.InteropServices
 <Assembly: AssemblyDescription("A simple GUI to change OpenSCAD JSON customiser files and generate STL files. Freeware - Open Source")>
 <Assembly: AssemblyCompany("sadLogic")>
 <Assembly: AssemblyProduct("OpenSCadCustomizer")>
-<Assembly: AssemblyCopyright("Copyright ©sadLogic  2023")>
+<Assembly: AssemblyCopyright("Copyright ©sadLogic  2023-24")>
 <Assembly: AssemblyTrademark("Humankind, :) Freeware")>
 
 <Assembly: ComVisible(False)>
