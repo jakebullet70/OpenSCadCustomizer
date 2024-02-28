@@ -98,13 +98,16 @@ Public Class frmMain
             dialog.SelectedPath = My.Settings.savefolder
             If DialogResult.OK = dialog.ShowDialog() Then
                 stlfile = Path.Combine(dialog.SelectedPath, Path.GetFileName(stlfile))
+                My.Settings.savefolder = dialog.SelectedPath
+                My.Settings.Save()
             Else
                 Return
             End If
         End If
 
         '--- JSON file with updated properties
-        Dim newParamOutFile = Path.Combine(p_OutPath, p_paramSetFile)
+        Dim newParamOutFile = Path.Combine(Path.GetTempPath, p_paramSetFile)
+        misc.SafeKill(newParamOutFile)
 
         '--- create new JSON param file
         File.WriteAllText(newParamOutFile, txt)
