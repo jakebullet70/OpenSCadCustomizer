@@ -6,11 +6,24 @@ Module misc
     Private Const QUOTE As String = Chr(34)
 
     Public Sub FirstRun()
-        '--- make sure we have a save to path
-        If String.IsNullOrEmpty(My.Settings.savefolder) Then
-            My.Settings.savefolder = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)
-            My.Settings.Save()
-        End If
+
+        '--- FORCE a the user to pick a output path on 1st run
+        '--- This is part of the OneDrive BUG
+
+        '---------------------------------------------------------------------------
+        '--- on my machine OneDrive is not installed BUT!!!!
+        '--- Environment.SpecialFolder is returning OneDrive paths
+        '---------------------------------------------------------------------------
+
+        '--- This workind fine for a long time, One of the Win 10 updates broke it
+
+        ''--- make sure we have a save to path
+        'My.Settings.savefolder = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)
+        'If String.IsNullOrEmpty(My.Settings.savefolder) Then
+        '    My.Settings.savefolder = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)
+        '    My.Settings.Save()
+        'End If
+
     End Sub
 
     Public Sub SafeKill(fname As String)
@@ -100,7 +113,7 @@ Module misc
     Public Sub OpenInSlicer(ByVal modelSTL As String)
 
         If Not File.Exists(modelSTL) Then
-            MsgBox("Whoops! STL file does not exist.")
+            MsgBox("Whoops! STL file does not exist." & vbCrLf & "Try again using 'Prompt for save path'")
             Return
         End If
 
