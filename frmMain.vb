@@ -149,8 +149,13 @@ Public Class frmMain
 
         misc.SafeKill(stlfile)
 
+        '--- The --info param was causing the BAT file to fail.  
+        '--- Worked at one time...
+        'Dim txt = "openscad.exe " &
+        'CStr("--info -o @" & stlfile & "@ -p @" & ParamOutfile & "@ -P " & p_paramSetName & " @" & cadfile & "@").Replace("@", Chr(34))
+
         Dim txt = "openscad.exe " &
-            CStr("--info -o @" & stlfile & "@ -p @" & ParamOutfile & "@ -P " & p_paramSetName & " @" & cadfile & "@").Replace("@", Chr(34))
+            CStr("-o @" & stlfile & "@ -p @" & ParamOutfile & "@ -P " & p_paramSetName & " @" & cadfile & "@").Replace("@", Chr(34))
 
         If Debugger.IsAttached OrElse My.Settings.debug Then
             File.WriteAllText(batFile, txt & vbCrLf & "pause")
