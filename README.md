@@ -8,6 +8,7 @@ I 3d-print allot of electronic project boxes. I Got tired of editing sizes by ha
 1. Download the latest release zip file.
 2. Unzip to whatever folder you want.
 3. Run the EXE and click the Setup button to setup paths.
+4. One your model is generated and in your slicer do a 'split parts'  
 
 
 ![image](https://github.com/jakebullet70/OpenSCadCustomizer/assets/14124210/f38fbd2d-6e95-4dc3-9bcd-a7b2603ae32f)  
