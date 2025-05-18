@@ -13,6 +13,7 @@ Public Class frmMain
 
     '--- How to write to FreeCAD spreedsheet-param files.
     'https://stackoverflow.com/questions/60687834/how-to-update-spreadsheet-values-using-freecad-python-module
+    '---- is this still valid in the new FreeCAD version 1? ******************
 
 
     '===========================================================================
