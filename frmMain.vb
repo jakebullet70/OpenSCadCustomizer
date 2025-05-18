@@ -76,6 +76,7 @@ Public Class frmMain
     End Sub
 
     Private Sub btnGenerate_Click(sender As Object, e As EventArgs) Handles btnGenerate.Click
+        Dim SetSavePath As Boolean = False
 
         If Directory.Exists(My.Settings.scadfolder) = False Then
             MsgBox("SCad folder not set. Please run setup.")
@@ -84,26 +85,29 @@ Public Class frmMain
 
         '--- files and paths
         p_OutPath = My.Settings.savefolder
-        If p_OutPath = "" Then
-            p_OutPath = "C:\Users\ehome\Downloads"
+        If Not Directory.Exists(p_OutPath) Then
+            SetSavePath = True
         End If
-
-        '--- JSON file with updated properties
-        Dim newParamOutFile = Path.Combine(p_OutPath, p_paramSetFile)
 
         '--- substitute the properties
         Dim txt = ReplaceVars(File.ReadAllText(Path.Combine(p_ModelsPath, p_paramSetFile)))
 
         Dim stlfile As String = Path.Combine(p_OutPath, p_CADfile.Replace(".scad", ".stl"))
-        If chkPrompt.Checked Then
+        If chkPrompt.Checked Or SetSavePath = True Then
             Dim dialog = New FolderBrowserDialog()
             dialog.SelectedPath = My.Settings.savefolder
             If DialogResult.OK = dialog.ShowDialog() Then
                 stlfile = Path.Combine(dialog.SelectedPath, Path.GetFileName(stlfile))
+                My.Settings.savefolder = dialog.SelectedPath
+                My.Settings.Save()
             Else
                 Return
             End If
         End If
+
+        '--- JSON file with updated properties
+        Dim newParamOutFile = Path.Combine(Path.GetTempPath, p_paramSetFile)
+        misc.SafeKill(newParamOutFile)
 
         '--- create new JSON param file
         File.WriteAllText(newParamOutFile, txt)
@@ -112,7 +116,7 @@ Public Class frmMain
         Dim retVal = ShellAndWait(newParamOutFile, stlfile)
 
         If retVal <> 0 Then
-            MsgBox("OOPS! Something went wrong. Exit Code = " & CInt(retVal))
+            MsgBox("OOPS! Something went wrong. Exit Code = " & CInt(retVal) & vbCrLf & "A selected path with 'OneDrive' in it has been know to cause issues")
         Else
             If chkOpen.Checked Then
                 misc.OpenInSlicer(stlfile)
@@ -145,10 +149,15 @@ Public Class frmMain
 
         misc.SafeKill(stlfile)
 
-        Dim txt = "openscad.exe " &
-            CStr("--info -o @" & stlfile & "@ -p @" & ParamOutfile & "@ -P " & p_paramSetName & " @" & cadfile & "@").Replace("@", Chr(34))
+        '--- The --info param was causing the BAT file to fail.  
+        '--- Worked at one time...
+        'Dim txt = "openscad.exe " &
+        'CStr("--info -o @" & stlfile & "@ -p @" & ParamOutfile & "@ -P " & p_paramSetName & " @" & cadfile & "@").Replace("@", Chr(34))
 
-        If Debugger.IsAttached Then
+        Dim txt = "openscad.exe " &
+            CStr("-o @" & stlfile & "@ -p @" & ParamOutfile & "@ -P " & p_paramSetName & " @" & cadfile & "@").Replace("@", Chr(34))
+
+        If Debugger.IsAttached OrElse My.Settings.debug Then
             File.WriteAllText(batFile, txt & vbCrLf & "pause")
         Else
             File.WriteAllText(batFile, txt)
