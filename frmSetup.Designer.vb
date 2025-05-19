@@ -93,9 +93,9 @@ Partial Class frmSetup
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(12, 116)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(83, 13)
+        Me.Label3.Size = New System.Drawing.Size(86, 13)
         Me.Label3.TabIndex = 6
-        Me.Label3.Text = "OpenSCad path"
+        Me.Label3.Text = "OpenSCAD path"
         '
         'txtCadFolder
         '

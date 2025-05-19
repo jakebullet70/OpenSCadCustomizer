@@ -37,6 +37,10 @@ Public Class frmSetup
         '    dialog.SelectedPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)
         'End If
         If DialogResult.OK = dialog.ShowDialog() Then
+            If Not File.Exists(dialog.SelectedPath & "\openscad.exe") Then
+                MsgBox("Problem. Cannot find OpenSCAD EXE.")
+                Exit Sub
+            End If
             txtCadFolder.Text = dialog.SelectedPath
             m_CadFolder = txtCadFolder.Text
         End If
