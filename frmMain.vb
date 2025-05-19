@@ -2,7 +2,7 @@
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Window
 
 Public Class frmMain
-    Public Const CAD_FOLDER_NOT_SET As String = "SCAD folder not set, Please run setup."
+    Public Const CAD_FOLDER_NOT_SET As String = "OpenSCAD folder not set, Please run setup."
     Private p_OutPath = ""
     Private p_ModelsPath = ""
     Private p_paramSetName = ""
@@ -30,6 +30,7 @@ Public Class frmMain
 
         chkPrompt.Checked = My.Settings.prompt4savepath
         chkOpen.Checked = My.Settings.openInSlicer
+        Me.Text = Me.Text & String.Format("  - V{0}", My.Application.Info.Version.ToString).TrimEnd("0").TrimEnd(".")
 
     End Sub
 
@@ -80,7 +81,7 @@ Public Class frmMain
         Dim SetSavePath As Boolean = False
 
         If Directory.Exists(My.Settings.scadfolder) = False Then
-            MsgBox("SCad folder not set. Please run setup.")
+            MsgBox(CAD_FOLDER_NOT_SET)
             Return
         End If
 
@@ -227,4 +228,6 @@ Public Class frmMain
         My.Settings.prompt4savepath = chkPrompt.Checked
         My.Settings.Save()
     End Sub
+
+
 End Class

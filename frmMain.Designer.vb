@@ -73,9 +73,9 @@ Partial Class frmMain
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(21, 23)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(68, 13)
+        Me.Label4.Size = New System.Drawing.Size(94, 13)
         Me.Label4.TabIndex = 0
-        Me.Label4.Text = "SCAD &Model"
+        Me.Label4.Text = "OpenSCAD &Model"
         '
         'btnSetup
         '
@@ -196,7 +196,7 @@ Partial Class frmMain
         Me.MaximumSize = New System.Drawing.Size(653, 407)
         Me.Name = "frmMain"
         Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
-        Me.Text = "Customizer - OpenSCad "
+        Me.Text = "Customizer - OpenSCAD"
         CType(Me.picBoxStyle, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
